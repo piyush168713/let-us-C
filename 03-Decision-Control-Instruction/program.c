@@ -302,37 +302,37 @@
 // program to obtain the reversed number and to determine whether
 // the original and reversed numbers are equal or not.
 
-// #include<stdio.h>
+#include<stdio.h>
 
-// int main(){
-//     int n, reversedno = 0;
-//     printf("Enter a five digit number: ");
-//     scanf("%d", &n);
+int main(){
+    int n, reversedno = 0;
+    printf("Enter a five digit number: ");
+    scanf("%d", &n);
 
-//     int temp = n;
+    int temp = n;
 
-//     if(n > 99999 || n < 10000){
-//         printf("Error: Enter a five-digit number.\n");
-//         return 1;
-//     }
+    if(n > 99999 || n < 10000){
+        printf("Error: Enter a five-digit number.\n");
+        return 1;
+    }
 
-//     while(n != 0){
-//         int digit = n%10;
-//         reversedno = reversedno * 10 + digit;
-//         n = n/10;
-//     }
+    while(n != 0){
+        int digit = n%10;
+        reversedno = reversedno * 10 + digit;
+        n = n/10;
+    }
 
-//     printf("Reversed number is %d\n", reversedno);
+    printf("Reversed number is %d\n", reversedno);
 
-//     if(temp == reversedno){
-//         printf("Original and Reversed Number are same\n");
-//     }
-//     else{
-//         printf("Original and Reversed Number are not same\n");
-//     }
+    if(temp == reversedno){
+        printf("Original and Reversed Number are same\n");
+    }
+    else{
+        printf("Original and Reversed Number are not same\n");
+    }
 
-//     return 0;
-// }
+    return 0;
+}
 
 
 
@@ -544,41 +544,41 @@
 // 01/01/01. If any year is input through the keyboard write a program
 // to find out what is the day on 1st January of this year.
 
-#include<stdio.h>
+// #include<stdio.h>
 
-int main(){
-    int givenYear = 2001;
-    int year;    // 2005
-    printf("Enter a year: ");
-    scanf("%d", &year);
+// int main(){
+//     int givenYear = 2001;
+//     int year;    // 2005
+//     printf("Enter a year: ");
+//     scanf("%d", &year);
 
-    int diff = year - givenYear;    // 2005 - 2001 = 4
-    int leapYear = diff/4;          // 4/4 = 1
-    int nonLeapYear = diff - leapYear;    // 4-1 = 3
+//     int diff = year - givenYear;    // 2005 - 2001 = 4
+//     int leapYear = diff/4;          // 4/4 = 1
+//     int nonLeapYear = diff - leapYear;    // 4-1 = 3
 
-    int days = (leapYear * 366) + (nonLeapYear * 365) + 1;    // (1*366) + (3*365) + 1 // +1 for 1 Jan of next year
+//     int days = (leapYear * 366) + (nonLeapYear * 365) + 1;    // (1*366) + (3*365) + 1 // +1 for 1 Jan of next year
 
-    if(days%7 == 0){
-        printf("Sunday");
-    }
-    if(days%7 == 1){
-        printf("Monday");
-    }
-    if(days%7 == 2){
-        printf("Tuesday");
-    }
-    if(days%7 == 3){
-        printf("Wednesday");
-    }
-    if(days%7 == 4){
-        printf("Thursday");
-    }
-    if(days%7 == 5){
-        printf("Friday");
-    }
-    if(days%7 == 6){
-        printf("Saturday");
-    }
+//     if(days%7 == 0){
+//         printf("Sunday");
+//     }
+//     if(days%7 == 1){
+//         printf("Monday");
+//     }
+//     if(days%7 == 2){
+//         printf("Tuesday");
+//     }
+//     if(days%7 == 3){
+//         printf("Wednesday");
+//     }
+//     if(days%7 == 4){
+//         printf("Thursday");
+//     }
+//     if(days%7 == 5){
+//         printf("Friday");
+//     }
+//     if(days%7 == 6){
+//         printf("Saturday");
+//     }
 
-    return 0;
-}
+//     return 0;
+// }
