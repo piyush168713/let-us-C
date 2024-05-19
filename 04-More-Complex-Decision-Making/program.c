@@ -491,3 +491,285 @@
 
 
 
+// b)
+
+// pseudocode
+//     find max value among r, g, b
+//     w = max(max(r/255, g/255), b/255);
+//     c = (w - (r/255))/w;
+//     m = (w - (g/255))/w;
+//     y = (w - (b/255))/w;
+//     k = 1-w;
+
+
+
+// #include<stdio.h>
+
+// int main(){
+//     float r, g, b, c, m, y, k, w = 0;
+//     printf("Enter the color of R, G and B: ");
+//     scanf("%f %f %f", &r, &g, &b);
+
+//     r /= 255;
+//     g /= 255;
+//     b /= 255;
+
+//     // find max value among r, g, b
+//     // if(w < r)
+//     //     w = r;
+    
+//     // if(w < g)
+//     //     w = g;
+    
+//     // if(w < b)
+//     //     w = b;
+
+//     // find max value among r, g, b
+//     // if(r > g){
+//     //     if(r > b){
+//     //         w = r;
+//     //     }
+//     //     else{
+//     //         w = b;
+//     //     }
+//     // }
+//     // else{
+//     //     if(g > b){
+//     //         w = g;
+//     //     }
+//     //     else{
+//     //         w = b;
+//     //     }
+//     // }
+
+//     // find max value among r, g, b
+//     (r > g) ? (r > b ? (w=r) : (w=b)) : (g > b ? (w=g) : (w=b));
+
+
+//     c = (w - r)/w;
+//     m = (w - g)/w;
+//     y = (w - b)/w;
+//     k = 1-w;
+
+//     printf("\nC : %f\nM : %f\nY : %f\nK : %f", c,m,y,k);
+//     return 0;
+// }
+
+
+
+
+// c)
+// condition 1: Hardness must be greater than 50
+// condition 2: Carbon content must be less than 0.7
+// condition 3: Tensile strenth must be greater then 5600
+
+// The grades are as follows:
+// Grade is 10 if all three conditions are met
+// Grade is 9 if conditions (i) and (ii) are met
+// Grade is 8 if conditions (ii) and (iii) are met
+// Grade is 7 if conditions (i) and (iii) are met
+// Grade is 6 if only one condition is met
+// Grade is 5 if none of the conditions are met
+// Write a program, which will require the user to give values of
+// hardness, carbon content and tensile strength of the steel under
+// consideration and output the grade of the steel.
+
+// #include<stdio.h>
+
+// int main(){
+//     int hard, tensile;
+//     float carbon;
+//     printf("Enter the strength of hardness, carbon and tensile: ");
+//     scanf("%d %f %d", &hard, &carbon, &tensile);
+//     printf("Author - Piyush Kumar\n");
+
+//     if(hard > 50 && carbon < 0.7 && tensile > 5600){
+//         printf("Grade is 10\n");
+//     }
+//     else if(hard > 50 && carbon < 0.7 && tensile <= 5600){
+//         printf("Grade is 9\n");
+//     }
+//     else if(hard <= 50 && carbon < 0.7 && tensile > 5600){
+//         printf("Grade is 8\n");
+//     }
+//     else if(hard > 50 && carbon >= 0.7 && tensile > 5600){
+//         printf("Grade is 7\n");
+//     }
+//     else if((hard > 50 && carbon >= 0.7 && tensile <= 5600) || (hard <= 50 && carbon < 0.7 && tensile <= 5600) || (hard <= 50 && carbon >= 0.7 && tensile > 5600)){
+//         printf("Grade is 6\n");
+//     }
+//     else{
+//         printf("Grade is 5\n");
+//     }
+//     return 0;
+// }
+
+
+
+// d)
+// The Body Mass Index (BMI) is defined as ratio of the weight of a
+// person (in kilograms) to the square of the height (in meters). Write
+// a program that receives weight and height, calculates the BMI, and
+// reports the BMI category as per the following table:
+
+// #include<stdio.h>
+
+// int main(){
+//     float ht, wt, bmi;
+//     printf("Enter height(in meters) and weight(in kilograms): ");
+//     scanf("%f %f", &ht, &wt);
+//     bmi = wt / (ht*ht);
+//     printf("Your BMI category is: %f\n", bmi);
+
+//     if(bmi < 15){
+//         printf("Starvation\n");
+//     }
+//     else if(bmi >= 15.1 && bmi <= 17.5){
+//         printf("Anorexic\n");
+//     }
+//     else if(bmi >= 17.6 && bmi <= 18.5){
+//         printf("Underweight\n");
+//     }
+//     else if(bmi >= 18.6 && bmi <= 24.9){
+//         printf("Ideal\n");
+//     }
+//     else if(bmi >= 25 && bmi <= 25.9){
+//         printf("Overweight\n");
+//     } 
+//     else if(bmi >= 30 && bmi <= 30.9){
+//         printf("Obese\n");
+//     }
+//     else if(bmi >= 40){
+//         printf("Morbidly Obese\n");
+//     }
+//     return 0;
+// }
+
+
+
+
+
+// [E] 
+// Answer the following questions:
+
+// a)
+
+// Using conditional operators determine:
+// (1) Whether the character entered through the keyboard is a lower case alphabet or not.
+
+// #include<stdio.h>
+
+// int main(){
+//     char c;
+//     printf("Enter a character: ");
+//     scanf("%c", &c);
+//     (c >= 97 && c <= 122) ? (printf("Lower case alphabet\n")) : (printf("Not a lower case alphabet\n"));
+//     return 0;
+// }
+
+// (2) Whether a character entered through the keyboard is a special symbol or not.
+
+// #include<stdio.h>
+
+// int main(){
+//     char c;
+//     printf("Enter a character: ");
+//     scanf("%c", &c);
+
+//     (c >= 97 && c <= 122 ) || (c >= 65 && c <= 90) ? (printf("Not a special symbol\n")) : (printf("Special symbol\n"));
+
+//     return 0;
+// }
+
+
+
+// (b) 
+// Write a program using conditional operators to determine whether
+// a year entered through the keyboard is a leap year or not.
+
+// #include<stdio.h>
+
+// int main(){
+//     int yr;
+//     printf("Enter year: ");
+//     scanf("%d", &yr);
+
+//     ((yr%4 == 0) && (yr%100 != 0 || yr%400 == 0)) ? (printf("Leap year\n")) : (printf("Not a leap year\n"));
+//     return 0;
+// }
+
+
+
+
+// c)
+// Write a program to find the greatest of the three numbers entered
+// through the keyboard. Use conditional operators.
+
+// #include<stdio.h>
+
+// int main(){
+//     int a, b, c;
+//     printf("Enter a, b and c: ");
+//     scanf("%d %d %d", &a, &b, &c);
+
+//     (a > b) ? (a > c ? printf("%d\n", a) : printf("%d\n", c)) : (b > c ? printf("%d\n", b) : printf("%d\n", c));
+
+//     return 0;
+// }
+
+
+
+// d)
+// Write a program to receive value of an angle in degrees and check
+// whether sum of squares of sine and cosine of this angle is equal to 1.
+
+// #include<stdio.h>
+// #include<math.h>
+
+// int main(){
+//     float x;
+//     printf("Enter the angle in degrees: ");
+//     scanf("%f", &x);
+//     x = 0.0174533*x;
+//     if((sin(x)*sin(x)) + (cos(x)*cos(x)) == 1){
+//         printf("sin^2+cos^2=1 is true");
+//     }
+//     else{
+//         printf("sin^2+cos^2=1 is not true");
+//     }
+//     return 0;
+// }
+
+
+
+// (e) 
+// Rewrite the following program using conditional operators.
+// # include <stdio.h>
+// int main( )
+// {
+//     float sal ;
+//     printf ( "Enter the salary" ) ;
+//     scanf ( "%f", &sal ) ;
+//     if ( sal >= 25000 && sal <= 40000 )
+//         printf ( "Manager\n" ) ;
+//     else
+//         if ( sal >= 15000 && sal < 25000 )
+//             printf ( "Accountant\n" ) ;
+//         else
+//             printf ( "Clerk\n" ) ;
+//     return 0 ;
+// }
+
+// using conditional operator
+
+#include<stdio.h>
+
+int main(){
+    float sal ;
+    printf ( "Enter the salary: " ) ;
+    scanf ( "%f", &sal ) ;
+
+    (sal >= 25000 && sal <= 40000) ? (printf("Manager\n")) : ((sal >= 15000 && sal < 25000) ? printf("Accountant\n"): printf("Clerk\n"));
+
+    return 0;
+}
