@@ -1,5 +1,4 @@
 // Q - 26
-
 // 3.1
 
 // While purchasing certain items, a discount of 10% is

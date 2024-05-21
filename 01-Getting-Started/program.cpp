@@ -1,5 +1,4 @@
 // q- 17
-
 // Day - 1
 
 // Ramesh’s basic salary is input through the keyboard. His dearness
