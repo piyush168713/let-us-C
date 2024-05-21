@@ -1,3 +1,5 @@
+// q - 34
+
 // The marks obtained by a student in 5 different subjects are
 // input through the keyboard. The student gets a division as per the
 // following rules:
