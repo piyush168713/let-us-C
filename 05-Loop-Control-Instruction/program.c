@@ -1,3 +1,5 @@
+// q - 25
+
 // we wish to calculate simple interest for 3 sets of values of principal, 
 // number of years and rate of interest.
 
@@ -339,26 +341,182 @@
 // number itself, then the number is called an Armstrong number. For
 // example, 153 = ( 1 * 1 * 1 ) + ( 5 * 5 * 5 ) + ( 3 * 3 * 3 ).
 
+// #include<stdio.h>
+
+// int main(){
+//     int num, sum, count = 1, r;
+//     while(count <= 500){
+//         num = count;
+//         sum = 0;
+//         while(num){
+//             r = num%10;
+//             sum = sum + (r*r*r);
+//             num /= 10;
+//         }
+//         if(count == sum){
+//             printf("%d is an Armstrong Number.\n", count);
+//         }
+//         count++;
+//     }
+//     return 0;
+// }
+
+
+
+// c)
+// Write a program for a matchstick game being played between the
+// computer and a user. Your program should ensure that the
+// computer always wins. Rules for the game are as follows:
+
+// - There are 21 matchsticks.
+// - The computer asks the player to pick 1, 2, 3, or 4 matchsticks.
+// - After the person picks, the computer does its picking.
+// - Whoever is forced to pick up the last matchstick loses the game.
+
+// #include<stdio.h>
+
+// int main(){
+//     int match_sticks = 21, user, computer;
+//     while(match_sticks >= 1){
+//         printf("Total Match Sticks: %d\n", match_sticks);
+//         printf("Pick up the match sticks between (1 to 4): ");
+//         scanf("%d", &user);
+
+//         if(user > 4){
+//             printf("Invalid Entry\n");
+//             break;
+//         }
+
+//         computer = 5-user;
+//         printf("Computer picks up the %d match sticks.\n", computer);
+
+//         match_sticks = match_sticks - computer - user;
+        
+//         if(match_sticks == 1){
+//             printf("You have been lost by Computer\n");
+//             break;
+//         }
+//     }
+//     return 0;
+// }
+
+
+
+
+// d)
+// Write a program to enter numbers till the user wants. At the end it
+// should display the count of positive, negative and zeros entered.
+
+// #include<stdio.h>
+
+// int main(){
+//     int n, choice, pos = 0, neg = 0, zeros = 0;
+//     printf("Enter 1 to continue & 0 to stop: ");
+//     scanf("%d", &choice);
+
+//     while(choice == 1){
+//         printf("Enter your number: ");
+//         scanf("%d", &n);
+
+//         if(n >= 1){
+//             pos++;
+//         }
+//         else if(n < 0){
+//             neg++;
+//         }
+//         else{
+//             zeros++;
+//         }
+
+//         printf("Enter 1 to continue & 0 to stop: ");
+//         scanf("%d", &choice);
+//     }
+
+//     printf("Positives: %d\n", pos);
+//     printf("Negatives: %d\n", neg);
+//     printf("Zeros: %d\n", zeros);
+
+//     return 0;
+// }
+
+
+
+
+// e)
+// Write a program to receive an integer and find its octal equivalent.
+// (Hint: To obtain octal equivalent of an integer, divide it continuously
+// by 8 till dividend doesn’t become zero, then write the remainders
+// obtained in reverse direction.)
+
+// #include<stdio.h>
+
+// int main(){
+//     int n, r, ans = 0, oct = 0, flag = 0;
+//     printf("Enter a number: ");
+//     scanf("%d", &n);
+//     r = n;
+
+//     while(r != 0){
+//         ans = ans*10 + r%8;
+//         if(ans == 0){
+//             flag = 1;
+//         }
+//         r /= 8;
+//     }
+
+//     // reverse
+//     while(ans != 0){
+//         oct = oct*10 + ans%10;
+//         ans /= 10;
+//     }
+
+//     if(flag == 1){
+//         oct *= 10;
+//     }
+
+//     printf("Octal no. is %d\n", oct);
+
+//     return 0;
+// }
+
+
+
+
+// Write a program to find the range of a set of numbers entered
+// through the keyboard. Range is the difference between the smallest
+// and biggest number in the list.
+
 #include<stdio.h>
 
 int main(){
-    int num, sum, count = 1, r;
-    while(count <= 500){
-        num = count;
-        sum = 0;
-        while(num){
-            r = num%10;
-            sum = sum + (r*r*r);
-            num /= 10;
-        }
-        if(count == sum){
-            printf("%d is an Armstrong Number.\n", count);
-        }
-        count++;
+    int min, max, N, num, range;
+
+    printf("Enter how many number you want to enter: ");
+    scanf("%d", &N);
+
+    printf("Enter the number: ");
+    scanf("%d", &num);
+
+    min = max = num;
+
+    // for(int i = 1;i < N; i++){
+    //     printf("Enter the number: ");
+    //     scanf("%d", &num);
+    //     if(num > max)   max = num;
+    //     if(num < min)   min = num;
+    // }
+
+    int i = 1;
+    while(i < N){
+        printf("Enter the number: ");
+        scanf("%d", &num);
+        if(num > max)   max = num;
+        if(num < min)   min = num;
+        i++;
     }
+
+    range = max - min;
+    printf("The range is %d\n", range);
+
     return 0;
 }
-
-
-
-
