@@ -1,4 +1,4 @@
-
+// q - 27
 
 /* Calculation of simple interest for 3 sets of p, n and r */
 // # include <stdio.h>
@@ -384,15 +384,215 @@
     //    {
     //       y=x;
     //    }
+    // while loop is missing
 
+
+// e) Which of the following statements is true for the following program?
+    // # include <stdio.h>
+    // int main( )
+    // {
+    //     int x = 10, y = 100 % 90 ;  // y = 10;
+    //     for (int i = 1 ; i <= 10 ; i++ ) ;
+    //     if ( x != y ) ;
+    //         printf ( "x = %d y = %d\n", x, y ) ;
+    //     return 0 ;
+    // }
+
+    // The printf( ) function is called 10 times.
+    // The program will produce the output x = 10 y = 10. - true
+    // The ; after the if ( x != y ) will not produce an error.
+    // The program will not produce any output.
+    // The printf( ) function is called infinite times.
+    
+
+
+// (f) Which of the following statement is true about a for loop used in a C program?
+// 1. for loop works faster than a while loop. - true
+// 2. All things that can be done using a for loop can also be done using a while loop. - true
+// 3. for ( ; ; ) implements an infinite loop. - true
+// 4. for loop can be used if we want statements in a loop to get executed at least once. - false, it can be done with do-while loop
+// 5. for loop works faster than a do-while loop. - 
+
+
+
+// [B] 
+// Attempt the following questions:
+
+// (a) Write a program to print the multiplication table of the number
+//     entered by the user. The table should get displayed in the following
+//     form:
+//     29 * 1 = 29
+//     29 * 2 = 58
+//     …
+
+
+// #include<stdio.h>
+
+// int main(){
+//     int n, a;
+//     printf("Enter a number: ");
+//     scanf("%d", &n);
+//     for(int i = 1; i <= 10; i++){
+//         a = n*i;
+//         printf("%d * %d = %d\n", n, i, a);
+//     }
+//     return 0;
+// }
+
+
+// b).
+
+// #include<stdio.h>
+
+// int main(){
+//     int y;
+//     float x, i;
+//     printf("           y         x      =       i");
+//     for (y = 1; y <= 6; y++)
+//     {
+//         for(x = 5.5; x <= 12.5; x += 0.5){
+//             i = 2 + (y + 0.5*x);
+//             printf("\n           %d     %f   =   %f", y, x, i);
+//         }
+//     }
+//     return 0;
+// }
+
+
+
+// c).
+
+// #include<stdio.h>
+// #include<math.h>
+
+// int main(){
+//     float p, q, r, n, a;
+//     for (int i = 1; i <= 10; i++)
+//     {
+//         printf("Enter principal, rate, time (in year) and compound interest respectively: ");
+//         scanf("%f %f %f %f", &p, &r, &n, &q);
+//         a = p * (pow((1 + r/q), n*q));
+//         printf("The amount is %f\n", a);
+//     }
+    
+//     return 0;
+// }
+
+
+
+// d).
+
+// #include<stdio.h>
+// #include<math.h>
+
+// int main(){
+//     int x;
+//     double a;
+//     printf("Enter the value of n: ");
+//     scanf("%d", &x);
+//     a = (double)(x-1)/x;
+
+//     for (int i = 2; i <= 7; i++)
+//     {
+//         a += (1.0/2.0) * pow(((double)(x-1)/x), i);
+//     }
+
+//     printf("Sum of 7 terms: %lf", a);
+    
+//     return 0;
+// }
+
+
+
+// e). write a program to print pythagorean triplets with side length less than or equal to 30.
+
+// #include<stdio.h>
+
+// int main(){
+//     printf("Pythagorean Triplets are: ");
+//     for(int i = 1; i <= 30; i++){
+//         for(int j = 1; j <= 30; j++){
+//             for(int k = 1; k <= 30; k++){
+//                 if((i*i + j*j == k*k) || (j*j + k*k == i*i) || (i*i + k*k == j*j)){
+//                     printf("\n%d %d %d", i, j, k);
+//                 }
+//             }
+//         }
+//     }
+//     return 0;
+// }
+
+
+
+// f).
+
+// #include<stdio.h>
+
+// int main(){
+//     int p = 100000;
+//     for(int i = 0; i < 10; i++){
+//         p = p - (p/100)*10;
+//         printf("Year: %d: %d\n", 10-i, p);
+//     }
+//     return 0;
+// }
+
+
+// g).
+
+// #include<stdio.h>
+
+// int main(){
+//     int i, j, k, l, num;
+//     for(int num = 0; num < 5000; num++){
+        
+//     }
+//     return 0;
+// }
+
+
+// h).
+
+// #include<stdio.h>
+
+// int main(){
+//     int hr;
+//     for(hr = 0; hr < 24; hr++){
+//         if(hr == 0){
+//             printf("12 Midnight\n");
+//         }
+//         else if(hr > 0 && hr < 12){
+//             printf("%d AM\n", hr);
+//         }
+//         else if(hr == 12){
+//             printf("%d Noon\n", hr);
+//         }
+//         else if(hr > 12 && hr < 24){
+//             printf("%d PM\n", hr-12);
+//         }
+//     }
+//     return 0;
+// }
+
+
+
+// i).
 
 #include<stdio.h>
 
 int main(){
-    int y, x = 0 ;
-    do
-    {
-        y=x;
+    int num, r, c, sp, i = 1;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    for(r = 1; r <= num; r++){
+        for(sp = 1; sp <= num-r; sp++){
+            printf(" ");
+        }
+        for(c = 1; c <= r; c++, i++){
+            printf("%d ", i);
+        }
+        printf("\n");
     }
     return 0;
 }
+
