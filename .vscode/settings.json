@@ -4,6 +4,19 @@
         "iostream": "cpp",
         "stdlib.h": "c",
         "functional": "c",
-        "iterator": "c"
+        "iterator": "c",
+        "any": "c",
+        "array": "c",
+        "charconv": "c",
+        "chrono": "c",
+        "compare": "c",
+        "memory_resource": "c",
+        "ratio": "c",
+        "scoped_allocator": "c",
+        "tuple": "c",
+        "type_traits": "c",
+        "utility": "c",
+        "variant": "c",
+        "random": "c"
     }
 }
